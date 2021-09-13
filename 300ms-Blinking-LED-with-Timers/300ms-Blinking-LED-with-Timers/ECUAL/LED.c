@@ -5,13 +5,9 @@
  *      Author: Omar
  */
 #include "LED.h"
-#define counts_num 293
-
 void LED_init(uint8_t port_name,uint8_t pin_num)
 {
 	DIO_init(port_name, pin_num);
-	config conf = {timer1, compare, f_cpu_clk_1024, counts_num}; // initialize timer
-	Timer_init(&conf);
 }
 void LED_on(uint8_t port_name,uint8_t pin_num)
 {
